@@ -29,7 +29,10 @@
   let cursorEnabled = !reduceMotion;
 
   let panelPitch = 0;
+  let panelWidth = 0;
+  let gap = 0;
   let minX = 0;
+  const maxX = 0;
   let currentX = 0;
   let targetX = 0;
   let rafId = 0;
@@ -45,44 +48,27 @@
 
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
-  function centerPanelOffset(index) {
-    const panel = panels[index];
-    const panelLeft = panel.offsetLeft;
-    const centered = window.innerWidth * 0.5 - (panelLeft + panel.offsetWidth * 0.5);
-    return clamp(centered, minX, 0);
-  }
-
   function nearestPanelIndexFromX(x) {
-    let nearest = 0;
-    let best = Infinity;
-    panels.forEach((_, i) => {
-      const d = Math.abs(x - centerPanelOffset(i));
-      if (d < best) {
-        best = d;
-        nearest = i;
-      }
-    });
-    return nearest;
+    if (!panelPitch) return 0;
+    const idx = Math.round(Math.abs(x) / panelPitch);
+    return clamp(idx, 0, panels.length - 1);
   }
 
   function updateLayout() {
-    panelPitch = panels.length > 1 ? panels[1].offsetLeft - panels[0].offsetLeft : panels[0].offsetWidth;
-    const rightMostOffset = centerPanelOffset(panels.length - 1);
-    minX = Math.min(0, rightMostOffset);
+    panelWidth = panels[0].offsetWidth;
+    const cs = window.getComputedStyle(track);
+    gap = parseFloat(cs.columnGap || cs.gap || "0") || 0;
+    panelPitch = panelWidth + gap;
+    minX = -((panels.length - 1) * panelPitch);
 
-    if (currentX === 0 && targetX === 0) {
-      currentX = centerPanelOffset(0);
-      targetX = currentX;
-    } else {
-      currentX = clamp(currentX, minX, 0);
-      targetX = clamp(targetX, minX, 0);
-    }
+    currentX = clamp(currentX, minX, maxX);
+    targetX = clamp(targetX, minX, maxX);
     paintTrack();
     updateProgress(nearestPanelIndexFromX(currentX));
   }
 
   function paintTrack() {
-    track.style.transform = `translateX(${currentX}px)`;
+    track.style.transform = `translate3d(${currentX}px, 0, 0)`;
   }
 
   function updateProgress(index) {
@@ -102,8 +88,6 @@
   }
 
   function animate() {
-    const snapIndex = nearestPanelIndexFromX(targetX);
-
     if (reduceMotion) {
       currentX = targetX;
     } else {
@@ -114,30 +98,25 @@
     paintTrack();
     updateProgress(nearestPanelIndexFromX(currentX));
 
-    if (Math.abs(targetX - currentX) > 0.1) {
-      rafId = requestAnimationFrame(animate);
-    } else {
+    if (Math.abs(targetX - currentX) <= 0.05) {
       currentX = targetX;
       paintTrack();
-      updateProgress(snapIndex);
-      rafId = 0;
     }
-  }
-
-  function requestAnimate() {
-    if (!rafId) rafId = requestAnimationFrame(animate);
+    rafId = requestAnimationFrame(animate);
   }
 
   function snapToNearest() {
     const i = nearestPanelIndexFromX(targetX);
-    targetX = centerPanelOffset(i);
-    requestAnimate();
+    targetX = clamp(-(i * panelPitch), minX, maxX);
   }
 
-  function onWheel(e) {
+  function handleWheel(e) {
     e.preventDefault();
-    targetX = clamp(targetX - e.deltaY * 0.9, minX, 0);
-    requestAnimate();
+    targetX -= e.deltaY * 1.5;
+    const localMaxX = 0;
+    const localMinX = -((panels.length - 1) * (panelWidth + gap));
+    targetX = Math.max(localMinX, Math.min(localMaxX, targetX));
+    console.log("wheel fired, targetX:", targetX);
     clearTimeout(snapTimer);
     snapTimer = setTimeout(snapToNearest, 300);
   }
@@ -152,8 +131,7 @@
   function onDragMove(clientX) {
     if (!isDragging) return;
     const dx = clientX - dragStartX;
-    targetX = clamp(dragStartOffset + dx, minX, 0);
-    requestAnimate();
+    targetX = clamp(dragStartOffset + dx, minX, maxX);
   }
 
   function onDragEnd() {
@@ -164,8 +142,7 @@
 
   function goToPanel(index) {
     const i = clamp(index, 0, panels.length - 1);
-    targetX = centerPanelOffset(i);
-    requestAnimate();
+    targetX = clamp(-(i * panelPitch), minX, maxX);
   }
 
   function buildProgress() {
@@ -226,7 +203,7 @@
     queueCursorPaint();
   });
 
-  window.addEventListener("wheel", onWheel, { passive: false });
+  window.addEventListener("wheel", handleWheel, { passive: false });
   track.addEventListener("pointerdown", (e) => {
     track.setPointerCapture(e.pointerId);
     onDragStart(e.clientX);
@@ -251,6 +228,7 @@
   buildProgress();
   updateLayout();
   goToPanel(0);
+  rafId = requestAnimationFrame(animate);
 
   setTimeout(() => {
     if (hint) hint.classList.add("is-hidden");
