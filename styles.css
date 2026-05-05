@@ -359,7 +359,7 @@ a { color: inherit; }
 .form-feedback { min-height: 1.2rem; margin: 0; color: var(--color-navy-soft); }
 
 .site-footer {
-  background: var(--color-white);
+  background: var(--color-cream-dark);
   color: var(--color-navy);
   padding: clamp(4rem, 8vw, 6rem) 0 2.5rem;
 }
