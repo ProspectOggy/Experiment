@@ -13,6 +13,7 @@
   const tPrev = document.getElementById("testimonial-prev");
   const tNext = document.getElementById("testimonial-next");
   const carousel = document.getElementById("testimonial-carousel");
+  const testimonialQuoteEl = document.querySelector(".testimonial-carousel__quote");
 
   const testimonials = [
     {
@@ -34,6 +35,7 @@
 
   let tIndex = 0;
   let tTimer = null;
+  let testimonialGlowSkipFirst = true;
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
@@ -48,8 +50,26 @@
     }
   }
 
+  const heroSection = document.getElementById("top");
+  function setPastHeroHeader() {
+    if (!header || !heroSection) return;
+    var bottom = heroSection.offsetTop + heroSection.offsetHeight;
+    if (window.scrollY > bottom - 96) {
+      header.classList.add("site-header--past-hero");
+    } else {
+      header.classList.remove("site-header--past-hero");
+    }
+  }
+
+  function onScrollHeader() {
+    setScrolledHeader();
+    setPastHeroHeader();
+  }
+
   setScrolledHeader();
-  window.addEventListener("scroll", setScrolledHeader, { passive: true });
+  setPastHeroHeader();
+  window.addEventListener("scroll", onScrollHeader, { passive: true });
+  window.addEventListener("resize", setPastHeroHeader, { passive: true });
 
   function closeMobileNav() {
     if (!siteNav || !navToggle) return;
@@ -87,6 +107,18 @@
     const item = testimonials[index];
     testimonialText.textContent = item.quote;
     testimonialAttr.textContent = item.attr;
+
+    if (testimonialQuoteEl && !testimonialGlowSkipFirst) {
+      testimonialQuoteEl.classList.remove("is-glowing");
+      window.requestAnimationFrame(function () {
+        testimonialQuoteEl.classList.add("is-glowing");
+        window.clearTimeout(testimonialQuoteEl._glowTimeout);
+        testimonialQuoteEl._glowTimeout = window.setTimeout(function () {
+          testimonialQuoteEl.classList.remove("is-glowing");
+        }, 600);
+      });
+    }
+    testimonialGlowSkipFirst = false;
   }
 
   function goTestimonial(delta) {
