@@ -3,254 +3,131 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="JC Engineers provides civil and structural engineering for infrastructure, transport, and development projects across Queensland."
-    />
-    <title>JCE ? Civil + Structural Engineering</title>
+    <meta name="description" content="JCE experimental horizontal portfolio-style experience." />
+    <title>JCE — Horizontal Panels</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
+    <a class="skip-link" href="#panel-contact">Skip to contact panel</a>
 
-    <header class="site-header" id="site-header">
-      <div class="shell shell--wide header-inner">
-        <a class="logo" href="#top" aria-label="JCE home">
-          <span class="logo__name">JCE</span>
-          <span class="logo__tag">PLAN ? DESIGN ? ENGINEER ? EXECUTE</span>
-        </a>
+    <div class="progress" id="progress" aria-hidden="true">
+      <div class="progress__labels" id="progress-labels"></div>
+      <div class="progress__ticks" id="progress-ticks"></div>
+      <div class="progress__active" id="progress-active"></div>
+    </div>
 
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span class="visually-hidden">Toggle menu</span>
-          <span></span><span></span><span></span>
-        </button>
+    <div class="center-cross" aria-hidden="true"></div>
 
-        <nav class="site-nav" id="site-nav" aria-label="Primary">
-          <ul>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#projects">Our Work</a></li>
-            <li><a href="#company">Company</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+    <p class="hint" id="hint">Press ? to advance</p>
+
+    <main class="viewport" id="viewport" aria-label="JCE horizontal experience">
+      <div class="track-wrap">
+        <div class="track" id="track">
+          <section class="panel panel--hero" aria-label="Hero statement panel">
+            <div class="panel__inner panel__inner--hero">
+              <h1 class="panel-title">JCE is a Queensland civil and structural engineering practice working with developers, builders and councils.</h1>
+              <div class="hero-circle" aria-hidden="true"></div>
+            </div>
+          </section>
+
+          <section class="panel" aria-label="Practical panel">
+            <div class="panel__inner panel__inner--letter">
+              <p class="mega-letter">P</p>
+              <p class="panel-note">Practical</p>
+            </div>
+          </section>
+
+          <section class="panel" aria-label="Approach statement panel">
+            <div class="panel__inner panel__inner--hero">
+              <h2 class="panel-title">We deliver clear, commercially aware engineering — from concept through approvals to construction.</h2>
+              <div class="hero-circle hero-circle--orange" aria-hidden="true"></div>
+            </div>
+          </section>
+
+          <section class="panel" aria-label="Delivery panel">
+            <div class="panel__inner panel__inner--letter">
+              <p class="mega-letter">D</p>
+              <p class="panel-note">Delivery</p>
+            </div>
+          </section>
+
+          <section class="panel" aria-label="Craft panel">
+            <div class="panel__inner panel__inner--letter">
+              <p class="mega-letter">C</p>
+              <p class="panel-note">Craft</p>
+            </div>
+          </section>
+
+          <section class="panel" aria-label="Software cursor panel">
+            <div class="panel__inner panel__inner--cursor">
+              <svg class="pixel-art" viewBox="0 0 64 64" aria-hidden="true">
+                <rect x="4" y="6" width="6" height="6" fill="#000"/><rect x="10" y="6" width="6" height="6" fill="#000"/><rect x="16" y="6" width="6" height="6" fill="#000"/>
+                <rect x="4" y="12" width="6" height="6" fill="#000"/><rect x="10" y="12" width="6" height="6" fill="#29A8E0"/><rect x="16" y="12" width="6" height="6" fill="#29A8E0"/><rect x="22" y="12" width="6" height="6" fill="#000"/>
+                <rect x="4" y="18" width="6" height="6" fill="#000"/><rect x="10" y="18" width="6" height="6" fill="#29A8E0"/><rect x="16" y="18" width="6" height="6" fill="#29A8E0"/><rect x="22" y="18" width="6" height="6" fill="#29A8E0"/><rect x="28" y="18" width="6" height="6" fill="#000"/>
+                <rect x="4" y="24" width="6" height="6" fill="#000"/><rect x="10" y="24" width="6" height="6" fill="#29A8E0"/><rect x="16" y="24" width="6" height="6" fill="#29A8E0"/><rect x="22" y="24" width="6" height="6" fill="#29A8E0"/><rect x="28" y="24" width="6" height="6" fill="#29A8E0"/><rect x="34" y="24" width="6" height="6" fill="#000"/>
+                <rect x="10" y="30" width="6" height="6" fill="#000"/><rect x="16" y="30" width="6" height="6" fill="#29A8E0"/><rect x="22" y="30" width="6" height="6" fill="#29A8E0"/><rect x="28" y="30" width="6" height="6" fill="#29A8E0"/><rect x="34" y="30" width="6" height="6" fill="#29A8E0"/><rect x="40" y="30" width="6" height="6" fill="#000"/>
+                <rect x="16" y="36" width="6" height="6" fill="#000"/><rect x="22" y="36" width="6" height="6" fill="#29A8E0"/><rect x="28" y="36" width="6" height="6" fill="#29A8E0"/><rect x="34" y="36" width="6" height="6" fill="#000"/>
+                <rect x="22" y="42" width="6" height="6" fill="#000"/><rect x="28" y="42" width="6" height="6" fill="#29A8E0"/><rect x="34" y="42" width="6" height="6" fill="#000"/>
+                <rect x="22" y="48" width="6" height="6" fill="#000"/><rect x="28" y="48" width="6" height="6" fill="#000"/>
+              </svg>
+              <p class="panel-note">Built for the people who use it.</p>
+            </div>
+          </section>
+
+          <section class="panel" aria-label="Coomera project panel">
+            <div class="panel__inner panel__inner--name">
+              <p class="project-word">Coomera</p>
+              <p class="panel-note">Coomera Connector Stage 1 — Civil + Structural for GoldlinQ</p>
+            </div>
+          </section>
+
+          <section class="panel" aria-label="Field notes panel">
+            <div class="panel__inner panel__inner--notes">
+              <p class="scribble">JCE field notes</p>
+              <p class="panel-note">Notes from the field — observations, lessons, and details from active projects.</p>
+            </div>
+          </section>
+
+          <section class="panel panel--yellow" aria-label="Principles panel">
+            <div class="panel__inner panel__inner--principles">
+              <p>Make it correct.</p>
+              <p>Make it durable.</p>
+              <p>Make it economical.</p>
+              <p>Make it buildable.</p>
+              <p>Make it on time.</p>
+              <p>Make it right.</p>
+              <p>Make it.</p>
+            </div>
+          </section>
+
+          <section class="panel" id="panel-contact" aria-label="Contact panel">
+            <div class="panel__inner panel__inner--contact">
+              <h2>Tell us about your project.</h2>
+              <a href="mailto:info@jcengineers.com.au">Email — info@jcengineers.com.au</a>
+              <a href="#">Phone — [placeholder]</a>
+              <a href="#">Locations — Gold Coast | Sydney | Melbourne</a>
+              <div class="end-mark">JCE</div>
+            </div>
+          </section>
+        </div>
       </div>
-    </header>
-
-    <main id="main">
-      <section class="hero" id="top">
-        <div class="shell shell--wide reveal">
-          <h1 class="hero-title">
-            Civil and structural engineering<br />
-            for developers,<br />
-            builders, and councils<br />
-            across<br />
-            Queensland.
-          </h1>
-          <div class="hero-photo" role="img" aria-label="Gold Coast skyline at sunset"></div>
-        </div>
-      </section>
-
-      <section class="mission" id="company">
-        <div class="shell shell--wide reveal">
-          <p class="mission-text">
-            We deliver clear, commercially aware engineering ? from concept through approval to construction. Practical. Reliable. On time and within budget.
-          </p>
-          <h2 class="section-watermark">Engineering Services</h2>
-        </div>
-      </section>
-
-      <section class="services-band" id="services">
-        <div class="shell shell--wide">
-          <div class="services-arrow reveal" aria-hidden="true">?</div>
-          <div class="services-grid">
-            <div class="services-copy reveal">
-              <p class="services-lead">
-                We provide civil and structural engineering across all phases ? from concept design and approvals support through to construction documentation and project oversight.
-              </p>
-              <a class="btn btn--yellow" href="#contact">Learn more</a>
-            </div>
-            <div class="services-photo reveal" role="img" aria-label="JCE team working on reinforced concrete site"></div>
-          </div>
-          <div class="services-statement reveal">
-            We've delivered projects across infrastructure, transport, marine, civic, and private development ? with results we're proud of.
-          </div>
-        </div>
-      </section>
-
-      <section class="projects" id="projects">
-        <div class="shell shell--wide">
-          <h2 class="projects-heading reveal">? Featured</h2>
-
-          <article class="project reveal">
-            <div class="project-media project-media--coomera" role="img" aria-label="Coomera Connector aerial corridor view"></div>
-            <h3>Coomera Connector Stage 1</h3>
-            <p>Piling and structural separation works adjacent to the Gold Coast Light Rail corridor, delivered for GoldlinQ.</p>
-            <a class="btn btn--navy" href="#">View Case Study</a>
-          </article>
-
-          <article class="project reveal">
-            <div class="project-media project-media--bribie" role="img" aria-label="Bribie Island pontoon and waterfront structures"></div>
-            <h3>Bribie Island Pontoon Network</h3>
-            <p>Marine structural design and inspection across multiple pontoon installations.</p>
-            <a class="btn btn--navy" href="#">View Case Study</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="logo-wall">
-        <div class="shell shell--wide">
-          <h2 class="reveal">Some clients</h2>
-          <div class="logo-grid reveal" role="list">
-            <div role="listitem">Client 01</div><div role="listitem">Client 02</div><div role="listitem">Client 03</div><div role="listitem">Client 04</div><div role="listitem">Client 05</div>
-            <div role="listitem">Client 06</div><div role="listitem">Client 07</div><div role="listitem">Client 08</div><div role="listitem">Client 09</div><div role="listitem">Client 10</div>
-            <div role="listitem">Client 11</div><div role="listitem">Client 12</div><div role="listitem">Client 13</div><div role="listitem">Client 14</div><div role="listitem">Client 15</div>
-            <div role="listitem">Client 16</div><div role="listitem">Client 17</div><div role="listitem">Client 18</div><div role="listitem">Client 19</div><div role="listitem">Client 20</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact-cta" id="contact">
-        <div class="shell">
-          <h2 class="reveal">Let's get your project moving.</h2>
-          <p class="reveal">Tell us about your project. Clear advice. Fast turnaround. No surprises.</p>
-          <a class="btn btn--navy btn--large reveal" href="#contact-form">Get a Fast Fee + Timeframe</a>
-
-          <form class="contact-form reveal" id="contact-form" novalidate>
-            <div class="form-row">
-              <div>
-                <label for="first-name">First Name (required)</label>
-                <input id="first-name" name="firstName" type="text" required />
-              </div>
-              <div>
-                <label for="last-name">Last Name (required)</label>
-                <input id="last-name" name="lastName" type="text" required />
-              </div>
-            </div>
-
-            <div>
-              <label for="email">Email (required)</label>
-              <input id="email" name="email" type="email" required />
-            </div>
-
-            <div class="form-row">
-              <div>
-                <label for="phone-country">Country (required)</label>
-                <select id="phone-country" name="phoneCountry" required>
-                  <option value="AU" selected>Australia</option>
-                  <option value="NZ">New Zealand</option>
-                  <option value="OTHER">Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="phone-number">Phone (required)</label>
-                <input id="phone-number" name="phoneNumber" type="tel" required placeholder="+61 ..." />
-              </div>
-            </div>
-
-            <div>
-              <label for="message">Message (required)</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-
-            <div>
-              <label for="subject-address">Subject Address (required)</label>
-              <input id="subject-address" name="subjectAddress" type="text" required />
-            </div>
-
-            <div>
-              <label for="project-phase">Project Phase (required)</label>
-              <select id="project-phase" name="projectPhase" required>
-                <option value="" disabled selected>Select phase</option>
-                <option value="concept">Concept</option>
-                <option value="design-development">Design Development</option>
-                <option value="pre-approval">Pre-Approval</option>
-                <option value="approved-construction">Approved ? Construction</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="expert">Expert Required (required)</label>
-              <select id="expert" name="expert" required>
-                <option value="" disabled selected>Select expert</option>
-                <option value="civil">Civil Engineer</option>
-                <option value="structural">Structural Engineer</option>
-                <option value="town-planner">Town Planner</option>
-                <option value="coordinator">Project Coordinator</option>
-                <option value="not-sure">Not sure</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="referral-source">How did you find us? (required)</label>
-              <select id="referral-source" name="referralSource" required>
-                <option value="" disabled selected>Select source</option>
-                <option value="google">Google</option>
-                <option value="referral">Referral</option>
-                <option value="social">Social Media</option>
-                <option value="past-client">Past Client</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p>
-            <button class="btn btn--navy" type="submit">Submit Enquiry</button>
-          </form>
-        </div>
-      </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="shell shell--wide footer-grid">
-        <div>
-          <a class="logo logo--footer" href="#top" aria-label="JCE home">
-            <span class="logo__name">JCE</span>
-            <span class="logo__tag">PLAN ? DESIGN ? ENGINEER ? EXECUTE</span>
-          </a>
+    <p class="chrome-note">JCE — Queensland engineering — 2026</p>
 
-          <nav class="footer-nav" aria-label="Footer">
-            <a href="#projects">Our Work</a>
-            <a href="#services">Our Services</a>
-            <a href="#company">Company</a>
-            <a href="#contact">Contact</a>
-          </nav>
-
-          <div class="footer-contact">
-            <p>Email: <a href="mailto:info@jcengineers.com.au">info@jcengineers.com.au</a></p>
-            <p>Phone: [placeholder]</p>
-            <p>Gold Coast | Sydney | Melbourne</p>
-          </div>
-
-          <div class="footer-social">
-            <a href="#" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg>
-            </a>
-            <a href="#" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M8 10v7M8 7.5v.01M12 17v-4.2c0-1.4.8-2.3 2.1-2.3 1.2 0 1.9.8 1.9 2.3V17" /></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-right">
-          <div class="iso-badges">
-            <span>ISO 45001</span>
-            <span>ISO 9001</span>
-            <span>ISO 14001</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="shell shell--wide footer-bottom">
-        <a href="#">PRIVACY & TERMS</a>
-        <span>? JCE 2026</span>
-      </div>
-    </footer>
+    <svg class="cursor-pixel" id="cursor-pixel" viewBox="0 0 24 28" aria-hidden="true">
+      <rect x="0" y="0" width="2" height="2" fill="#000"/><rect x="2" y="0" width="2" height="2" fill="#000"/><rect x="4" y="0" width="2" height="2" fill="#000"/>
+      <rect x="0" y="2" width="2" height="2" fill="#000"/><rect x="2" y="2" width="2" height="2" fill="#29A8E0"/><rect x="4" y="2" width="2" height="2" fill="#29A8E0"/><rect x="6" y="2" width="2" height="2" fill="#000"/>
+      <rect x="0" y="4" width="2" height="2" fill="#000"/><rect x="2" y="4" width="2" height="2" fill="#29A8E0"/><rect x="4" y="4" width="2" height="2" fill="#29A8E0"/><rect x="6" y="4" width="2" height="2" fill="#29A8E0"/><rect x="8" y="4" width="2" height="2" fill="#000"/>
+      <rect x="0" y="6" width="2" height="2" fill="#000"/><rect x="2" y="6" width="2" height="2" fill="#29A8E0"/><rect x="4" y="6" width="2" height="2" fill="#29A8E0"/><rect x="6" y="6" width="2" height="2" fill="#29A8E0"/><rect x="8" y="6" width="2" height="2" fill="#29A8E0"/><rect x="10" y="6" width="2" height="2" fill="#000"/>
+      <rect x="2" y="8" width="2" height="2" fill="#000"/><rect x="4" y="8" width="2" height="2" fill="#29A8E0"/><rect x="6" y="8" width="2" height="2" fill="#29A8E0"/><rect x="8" y="8" width="2" height="2" fill="#29A8E0"/><rect x="10" y="8" width="2" height="2" fill="#29A8E0"/><rect x="12" y="8" width="2" height="2" fill="#000"/>
+      <rect x="4" y="10" width="2" height="2" fill="#000"/><rect x="6" y="10" width="2" height="2" fill="#29A8E0"/><rect x="8" y="10" width="2" height="2" fill="#29A8E0"/><rect x="10" y="10" width="2" height="2" fill="#000"/>
+      <rect x="6" y="12" width="2" height="2" fill="#000"/><rect x="8" y="12" width="2" height="2" fill="#29A8E0"/><rect x="10" y="12" width="2" height="2" fill="#000"/>
+      <rect x="6" y="14" width="2" height="2" fill="#000"/><rect x="8" y="14" width="2" height="2" fill="#000"/>
+    </svg>
 
     <script src="script.js"></script>
   </body>
