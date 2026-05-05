@@ -15,6 +15,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="js/MagicRings.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+        }
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -110,7 +118,16 @@
             <p class="hero__meta">REGION ONE • REGION TWO • REGION THREE</p>
             <p class="hero__meta">Fast turnaround • Practical advice</p>
             <div class="hero__actions">
-              <a class="btn btn--primary" href="#contact">Get a Fast Fee + Timeframe</a>
+              <div class="cta-magic-wrap">
+                <div
+                  class="cta-magic-wrap__rings magic-rings-container"
+                  id="magic-rings-hero"
+                  aria-hidden="true"
+                ></div>
+                <a class="btn btn--primary cta-magic-wrap__btn" href="#contact"
+                  >Get a Fast Fee + Timeframe</a
+                >
+              </div>
               <p class="hero__caption">No obligation. Clear advice. Straight answers.</p>
               <a class="btn btn--outline" href="#services">See Our Services →</a>
             </div>
@@ -380,7 +397,18 @@
         <div class="layout final-cta__inner">
           <h2 id="final-cta-heading" class="final-cta__title">Let's Get Your Project Moving</h2>
           <p class="final-cta__sub">Clear advice. Fast turnaround. No surprises.</p>
-          <a class="btn btn--primary" href="#contact">Get a Fast Fee + Timeframe</a>
+          <div class="final-cta__cta">
+            <div class="cta-magic-wrap cta-magic-wrap--center">
+              <div
+                class="cta-magic-wrap__rings magic-rings-container"
+                id="magic-rings-final"
+                aria-hidden="true"
+              ></div>
+              <a class="btn btn--primary cta-magic-wrap__btn" href="#contact"
+                >Get a Fast Fee + Timeframe</a
+              >
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -444,6 +472,7 @@
       </p>
     </footer>
 
+    <script type="module" src="js/magic-rings-init.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
