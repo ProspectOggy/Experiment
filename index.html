@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -96,49 +96,91 @@
     </header>
 
     <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-heading">
-        <div class="layout hero__grid">
-          <div class="hero__visual" role="img" aria-label="Placeholder for hero photograph">
-            <span class="hero__visual-label">PLACEHOLDER — hero image</span>
-          </div>
-          <div class="hero__content">
-            <p class="hero__eyebrow">For developers, builders &amp; property owners across [REGION].</p>
-            <h1 class="hero__title" id="hero-heading">
-              <span class="hero__title-line">Practical Engineering</span>
-              <span class="hero__title-line"><span class="glow-accent">No Surprises</span></span>
-            </h1>
-            <p class="hero__sub">
-              Clear advice. Commercially aware. Designed to get approved.
-            </p>
-            <ul class="hero__checks">
-              <li><strong>✓</strong> Civil + Structural Engineering</li>
-              <li><strong>✓</strong> Town Planning &amp; Approvals support</li>
-              <li><strong>✓</strong> Project Coordination &amp; Technical Oversight</li>
-            </ul>
-            <p class="hero__meta">REGION ONE • REGION TWO • REGION THREE</p>
-            <p class="hero__meta">Fast turnaround • Practical advice</p>
-            <div class="hero__actions">
-              <div class="cta-magic-wrap">
-                <a class="btn btn--primary cta-magic-wrap__btn" href="#contact"
-                  >Get a Fast Fee + Timeframe</a
-                >
-                <div
-                  class="cta-magic-wrap__rings magic-rings-container"
-                  id="magic-rings-hero"
-                  aria-hidden="true"
-                ></div>
-              </div>
-              <p class="hero__caption">No obligation. Clear advice. Straight answers.</p>
-              <a class="btn btn--outline" href="#services">See Our Services →</a>
+      <section class="hero-stage" id="top" aria-label="JCE featured projects">
+        <div class="hero-stage__bg-stack" aria-hidden="true">
+          <div class="hero-stage__bg hero-stage__bg--a" data-bg-layer="a"></div>
+          <div class="hero-stage__bg hero-stage__bg--b" data-bg-layer="b"></div>
+        </div>
+        <div class="hero-stage__noise" aria-hidden="true"></div>
+
+        <div class="hero-stage__topbar">
+          <button type="button" class="hero-stage__menu-pill">Menu</button>
+          <p class="hero-stage__wordmark">JCE</p>
+          <div class="hero-stage__top-right">
+            <div class="hero-stage__clock" id="hero-clock">
+              <span class="hero-stage__clock-label" id="hero-clock-label">BNE</span>
+              <span class="hero-stage__clock-time" id="hero-clock-time">12:00 pm</span>
             </div>
-            <ul class="hero__checks hero__checks--secondary">
-              <li><strong>✓</strong> 20+ Years Combined Industry Experience</li>
-              <li><strong>✓</strong> Proven Council &amp; Approvals Expertise</li>
-              <li><strong>✓</strong> Fast, Commercially Aware Turnaround</li>
-            </ul>
-            <p class="hero__stars" aria-hidden="true">★★★★★</p>
-            <p class="hero__trust">Trusted by developers and builders across [REGIONS].</p>
+            <a
+              class="hero-stage__envelope"
+              href="mailto:info@jcengineers.com.au"
+              aria-label="Email JCE at info@jcengineers.com.au"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M4 6h16v12H4z" />
+                <path d="M4 7l8 6 8-6" />
+              </svg>
+            </a>
           </div>
+        </div>
+
+        <div class="hero-stage__layout">
+          <nav class="hero-stage__rail" id="hero-rail" aria-label="Select a project"></nav>
+
+          <div class="hero-stage__stage" id="hero-stage-main">
+            <p class="hero-stage__eyebrow" id="hero-eyebrow" hidden aria-hidden="true"></p>
+
+            <div class="hero-stage__artifact-wrap" id="hero-artifact-wrap" aria-hidden="true">
+              <div class="hero-stage__artifact" id="hero-artifact">
+                <span class="hero-stage__artifact-label">Project artifact</span>
+              </div>
+            </div>
+
+            <div class="hero-stage__title-cluster">
+              <div class="title-mask">
+                <h1 class="hero-stage__title" id="hero-heading">
+                  <span class="title-text is-settled" id="hero-title-text">We engineer<br />infrastructure</span>
+                </h1>
+              </div>
+            </div>
+
+            <p class="hero-stage__desc is-settled" id="hero-desc">
+              Since 2018, JCE has delivered civil and structural engineering for infrastructure, transport, and
+              development projects across Queensland and beyond.
+            </p>
+          </div>
+        </div>
+
+        <span id="hero-a11y-live" class="visually-hidden" aria-live="polite"></span>
+      </section>
+
+      <section class="hero-bridge layout" aria-label="Next steps">
+        <div class="hero-bridge__inner">
+          <p class="hero-bridge__eyebrow">For developers, builders &amp; property owners across Queensland.</p>
+          <div class="hero-bridge__actions">
+            <div class="cta-magic-wrap">
+              <a class="btn btn--primary cta-magic-wrap__btn" href="#contact">Get a Fast Fee + Timeframe</a>
+              <div
+                class="cta-magic-wrap__rings magic-rings-container"
+                id="magic-rings-hero"
+                aria-hidden="true"
+              ></div>
+            </div>
+            <p class="hero-bridge__caption">No obligation. Clear advice. Straight answers.</p>
+            <a class="btn btn--outline" href="#services">See Our Services →</a>
+          </div>
+          <ul class="hero-bridge__checks">
+            <li><strong>✓</strong> Civil + Structural Engineering</li>
+            <li><strong>✓</strong> Town Planning &amp; Approvals support</li>
+            <li><strong>✓</strong> Project Coordination &amp; Technical Oversight</li>
+          </ul>
+          <ul class="hero-bridge__checks hero-bridge__checks--secondary">
+            <li><strong>✓</strong> 20+ Years Combined Industry Experience</li>
+            <li><strong>✓</strong> Proven Council &amp; Approvals Expertise</li>
+            <li><strong>✓</strong> Fast, Commercially Aware Turnaround</li>
+          </ul>
+          <p class="hero-bridge__stars" aria-hidden="true">★★★★★</p>
+          <p class="hero-bridge__trust">Trusted by developers and builders across Queensland.</p>
         </div>
       </section>
 
@@ -346,7 +388,6 @@
         <div class="layout">
           <h2 id="logo-wall-heading" class="logo-wall__title">Trusted by Leading Builders, Developers &amp; Councils</h2>
           <div class="logo-wall__grid" role="list">
-            <!-- 21 placeholder logos -->
             <div class="logo-tile" role="listitem"><span>Logo 01</span></div>
             <div class="logo-tile" role="listitem"><span>Logo 02</span></div>
             <div class="logo-tile" role="listitem"><span>Logo 03</span></div>
@@ -401,9 +442,7 @@
           <p class="final-cta__sub">Clear advice. Fast turnaround. No surprises.</p>
           <div class="final-cta__cta">
             <div class="cta-magic-wrap cta-magic-wrap--center">
-              <a class="btn btn--primary cta-magic-wrap__btn" href="#contact"
-                >Get a Fast Fee + Timeframe</a
-              >
+              <a class="btn btn--primary cta-magic-wrap__btn" href="#contact">Get a Fast Fee + Timeframe</a>
               <div
                 class="cta-magic-wrap__rings magic-rings-container"
                 id="magic-rings-final"
@@ -474,6 +513,7 @@
       </p>
     </footer>
 
+    <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
     <script type="module" src="js/magic-rings-init.js"></script>
     <script src="script.js"></script>
   </body>
