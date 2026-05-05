@@ -150,7 +150,9 @@ a { color: inherit; }
   width: 100%;
   aspect-ratio: 21 / 9;
   min-height: 420px;
-  background: var(--color-navy);
+  background:
+    linear-gradient(rgba(12, 32, 64, 0.18), rgba(12, 32, 64, 0.18)),
+    url("assets/hero-top.jpg") center / cover no-repeat;
   color: var(--color-text-on-dark);
   display: grid;
   place-items: center;
