@@ -960,29 +960,28 @@ img {
   width: 100%;
 }
 
-/* Magic rings behind primary CTAs */
+/* Magic rings — sits below the primary CTA (not behind it) */
 .cta-magic-wrap {
-  position: relative;
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 1.75rem 2.25rem;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0;
   margin: 0;
 }
 
 .cta-magic-wrap--center {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cta-magic-wrap__rings {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: min(480px, 96vw);
-  height: 160px;
+  width: min(420px, 92vw);
+  height: 128px;
+  flex-shrink: 0;
   pointer-events: none;
-  z-index: 0;
 }
 
 .cta-magic-wrap__rings canvas {
@@ -990,8 +989,7 @@ img {
 }
 
 .cta-magic-wrap__btn {
-  position: relative;
-  z-index: 1;
+  flex-shrink: 0;
 }
 
 /* ----- Footer ----- */

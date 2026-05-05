@@ -1,9 +1,9 @@
 import { mountMagicRings } from "./MagicRings.js";
 
-/** Props aligned with your React Bits usage example */
+/** Matches primary CTA (--color-brand #29A8E0 + softer sky for ring gradient) */
 const ctaRingProps = {
-  color: "#fc42ff",
-  colorTwo: "#42fcff",
+  color: "#29a8e0",
+  colorTwo: "#5dc0ec",
   ringCount: 6,
   speed: 1,
   attenuation: 10,
