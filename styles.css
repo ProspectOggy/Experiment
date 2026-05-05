@@ -202,8 +202,10 @@ a { color: inherit; }
 }
 .services-photo {
   min-height: 500px;
-  background: rgba(12, 32, 64, 0.35);
-  border: 1px solid rgba(244, 241, 234, 0.3);
+  background:
+    linear-gradient(rgba(12, 32, 64, 0.14), rgba(12, 32, 64, 0.14)),
+    url("assets/services-photo.jpg") center / cover no-repeat;
+  border: 1px solid rgba(244, 241, 234, 0.25);
   display: grid;
   place-items: center;
 }
@@ -233,14 +235,26 @@ a { color: inherit; }
 }
 .project-media {
   width: 100%;
-  min-height: 500px;
+  aspect-ratio: 21 / 9;
+  min-height: clamp(260px, 42vw, 500px);
   background: var(--color-cream-dark);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: grid;
   place-items: center;
   overflow: hidden;
+  transition: transform 600ms ease-out;
 }
-.project-media span { transition: transform 600ms ease-out; }
-.project:hover .project-media span { transform: scale(1.03); }
+.project:hover .project-media { transform: scale(1.03); }
+
+.project-media--coomera {
+  background-image: url("assets/project-coomera.jpg");
+}
+
+.project-media--bribie {
+  background-image: url("assets/project-bribie.jpg");
+}
 .project h3 {
   margin: 1.5rem 0 0.75rem;
   font-size: clamp(1.7rem, 3vw, 2rem);
