@@ -1,3 +1,6 @@
 .DS_Store
 Thumbs.db
 *.log
+
+# Reference screenshots extracted from files.zip (keep locally if needed)
+_import_files_zip/

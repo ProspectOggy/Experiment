@@ -3,27 +3,447 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Experiment</title>
+    <meta
+      name="description"
+      content="BRAND — Practical engineering for developers, builders and property owners. Civil, structural, planning support and project coordination."
+    />
+    <title>BRAND — Practical Engineering | PLAN • DESIGN • ENGINEER • EXECUTE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <h1>Experiment</h1>
-      <p class="tagline">A separate site from your ePortfolio. Edit this page to match your project.</p>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" id="site-header">
+      <div class="site-header__inner">
+        <a class="logo-link" href="#top" aria-label="BRAND — home">
+          <span class="logo-link__mark" aria-hidden="true">
+            <svg class="logo-svg" width="120" height="72" viewBox="0 0 120 72" role="img">
+              <title>BRAND</title>
+              <circle
+                cx="44"
+                cy="36"
+                r="30"
+                fill="none"
+                stroke="var(--color-navy)"
+                stroke-width="1.5"
+              />
+              <text
+                x="44"
+                y="40"
+                text-anchor="middle"
+                fill="var(--color-navy)"
+                font-family="Nunito, system-ui, sans-serif"
+                font-size="15"
+                font-weight="800"
+              >
+                BRAND
+              </text>
+              <text
+                x="44"
+                y="62"
+                text-anchor="middle"
+                fill="var(--color-sky)"
+                font-family="Nunito, system-ui, sans-serif"
+                font-size="7"
+                font-weight="700"
+                letter-spacing="0.08em"
+              >
+                PLAN • DESIGN • ENGINEER • EXECUTE
+              </text>
+            </svg>
+          </span>
+        </a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link is-active" href="#top" data-nav="top">Home</a></li>
+            <li><a class="site-nav__link" href="#services" data-nav="services">Services</a></li>
+            <li><a class="site-nav__link" href="#contact" data-nav="contact">Contact</a></li>
+            <li><a class="site-nav__link" href="#about" data-nav="about">About</a></li>
+            <li><a class="site-nav__link" href="#faqs" data-nav="faqs">FAQs</a></li>
+            <li><a class="site-nav__link" href="#portfolio" data-nav="portfolio">Portfolio</a></li>
+            <li><a class="site-nav__link" href="#blog" data-nav="blog">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main>
-      <section class="card">
-        <h2>Next steps</h2>
-        <ol>
-          <li>Replace this copy with your real content.</li>
-          <li>Create a new empty repository on GitHub (for example <code>experiment</code>).</li>
-          <li>From this folder, run <code>git remote add origin …</code> and <code>git push -u origin main</code>.</li>
-          <li>Enable GitHub Pages on the <code>main</code> branch, root folder.</li>
-        </ol>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-heading">
+        <div class="layout hero__grid">
+          <div class="hero__visual" role="img" aria-label="Placeholder for hero photograph">
+            <span class="hero__visual-label">PLACEHOLDER — hero image</span>
+          </div>
+          <div class="hero__content">
+            <p class="hero__eyebrow">For developers, builders &amp; property owners across [REGION].</p>
+            <h1 class="hero__title" id="hero-heading">
+              <span class="hero__title-line">Practical Engineering</span>
+              <span class="hero__title-line">No Surprises</span>
+            </h1>
+            <p class="hero__sub">
+              Clear advice. Commercially aware. Designed to get approved.
+            </p>
+            <ul class="hero__checks">
+              <li><strong>✓</strong> Civil + Structural Engineering</li>
+              <li><strong>✓</strong> Town Planning &amp; Approvals support</li>
+              <li><strong>✓</strong> Project Coordination &amp; Technical Oversight</li>
+            </ul>
+            <p class="hero__meta">REGION ONE • REGION TWO • REGION THREE</p>
+            <p class="hero__meta">Fast turnaround • Practical advice</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#contact">Get a Fast Fee + Timeframe</a>
+              <p class="hero__caption">No obligation. Clear advice. Straight answers.</p>
+              <a class="btn btn--outline" href="#services">See Our Services →</a>
+            </div>
+            <ul class="hero__checks hero__checks--secondary">
+              <li><strong>✓</strong> 20+ Years Combined Industry Experience</li>
+              <li><strong>✓</strong> Proven Council &amp; Approvals Expertise</li>
+              <li><strong>✓</strong> Fast, Commercially Aware Turnaround</li>
+            </ul>
+            <p class="hero__stars" aria-hidden="true">★★★★★</p>
+            <p class="hero__trust">Trusted by developers and builders across [REGIONS].</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+        <div class="layout contact-section__inner">
+          <h2 id="contact-heading" class="visually-hidden">Contact</h2>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row form-row--split">
+              <div class="field">
+                <label for="first-name">First Name <span class="req">(required)</span></label>
+                <input
+                  id="first-name"
+                  name="firstName"
+                  type="text"
+                  autocomplete="given-name"
+                  required
+                  placeholder="First name"
+                />
+              </div>
+              <div class="field">
+                <label for="last-name">Last Name <span class="req">(required)</span></label>
+                <input
+                  id="last-name"
+                  name="lastName"
+                  type="text"
+                  autocomplete="family-name"
+                  required
+                  placeholder="Last name"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">(required)</span></label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="you@example.com"
+              />
+            </div>
+            <div class="form-row form-row--split">
+              <div class="field">
+                <label for="phone-country">Country <span class="req">(required)</span></label>
+                <select id="phone-country" name="phoneCountry" required class="input-select">
+                  <option value="AU" selected>Australia</option>
+                  <option value="NZ">New Zealand</option>
+                  <option value="OTHER">Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="phone-number">Phone <span class="req">(required)</span></label>
+                <input
+                  id="phone-number"
+                  name="phoneNumber"
+                  type="tel"
+                  autocomplete="tel"
+                  required
+                  placeholder="+61 …"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Message <span class="req">(required)</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Job description, council responses, plans or photos (JPEG, PDF only)"
+              ></textarea>
+            </div>
+            <div class="field">
+              <label for="subject-address">Subject Address <span class="req">(required)</span></label>
+              <input
+                id="subject-address"
+                name="subjectAddress"
+                type="text"
+                required
+                placeholder="Street Address, Suburb, State, Postcode"
+              />
+            </div>
+            <div class="field">
+              <label for="project-phase">Project Phase <span class="req">(required)</span></label>
+              <select id="project-phase" name="projectPhase" required class="input-select">
+                <option value="" disabled selected>Select phase</option>
+                <option value="concept">Concept</option>
+                <option value="design-development">Design Development</option>
+                <option value="pre-approval">Pre-Approval</option>
+                <option value="approved-construction">Approved – Construction</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="expert">Expert Required <span class="req">(required)</span></label>
+              <select id="expert" name="expert" required class="input-select">
+                <option value="" disabled selected>Select expert</option>
+                <option value="civil">Civil Engineer</option>
+                <option value="structural">Structural Engineer</option>
+                <option value="town-planner">Town Planner</option>
+                <option value="coordinator">Project Coordinator</option>
+                <option value="not-sure">Not sure</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="referral-source">How did you find us? <span class="req">(required)</span></label>
+              <select id="referral-source" name="referralSource" required class="input-select">
+                <option value="" disabled selected>Select source</option>
+                <option value="google">Google</option>
+                <option value="referral">Referral</option>
+                <option value="social">Social Media</option>
+                <option value="past-client">Past Client</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn--primary btn--block">Let's Discuss Your Project</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="services" id="services" aria-labelledby="services-heading">
+        <div class="layout services__cta-wrap">
+          <a class="btn btn--primary" href="#contact">Let's Discuss Your Project</a>
+        </div>
+        <div class="layout">
+          <h2 id="services-heading" class="visually-hidden">Services</h2>
+          <div class="services__grid">
+            <article class="service-tile">
+              <div class="service-tile__icon" aria-hidden="true">
+                <svg viewBox="0 0 120 120" width="120" height="120" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M60 20 L88 35 V70 Q88 88 60 98 Q32 88 32 70 V35 Z" />
+                  <text x="60" y="62" text-anchor="middle" fill="currentColor" font-size="28" font-family="Nunito, sans-serif" font-weight="800">B</text>
+                </svg>
+              </div>
+              <h3 class="service-tile__title">OfferOne</h3>
+              <p class="service-tile__desc">Fixed-scope solutions with clear deliverables.</p>
+            </article>
+            <article class="service-tile">
+              <div class="service-tile__icon" aria-hidden="true">
+                <svg viewBox="0 0 120 120" width="120" height="120" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="60" cy="68" r="22" />
+                  <path d="M38 68 H82 M60 46 V90" />
+                  <rect x="44" y="28" width="32" height="24" rx="4" />
+                  <rect x="48" y="32" width="10" height="12" rx="1" />
+                  <rect x="62" y="32" width="10" height="12" rx="1" />
+                </svg>
+              </div>
+              <h3 class="service-tile__title">Developments</h3>
+              <p class="service-tile__desc">End-to-end civil, structural &amp; approvals coordination.</p>
+            </article>
+            <article class="service-tile">
+              <div class="service-tile__icon" aria-hidden="true">
+                <svg viewBox="0 0 120 120" width="120" height="120" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 88 L60 32 L100 88 Z" />
+                  <path d="M32 88 H88 M44 68 H76 M52 52 H68" />
+                  <rect x="46" y="88" width="28" height="8" />
+                </svg>
+              </div>
+              <h3 class="service-tile__title">Structures</h3>
+              <p class="service-tile__desc">Commercial &amp; infrastructure structural design.</p>
+            </article>
+            <article class="service-tile">
+              <div class="service-tile__icon" aria-hidden="true">
+                <svg viewBox="0 0 120 120" width="120" height="120" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="54" y="24" width="12" height="72" />
+                  <path d="M60 24 L72 40 H48 Z" />
+                  <circle cx="60" cy="98" r="6" />
+                  <path d="M28 52 H42 M78 52 H92 M28 64 H38 M82 64 H92" />
+                </svg>
+              </div>
+              <h3 class="service-tile__title">Assets &amp; Contracts</h3>
+              <p class="service-tile__desc">Technical review, compliance &amp; asset support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="testimonials"
+        id="testimonials"
+        aria-labelledby="testimonials-heading"
+      >
+        <h2 id="testimonials-heading" class="visually-hidden">Testimonials</h2>
+        <div class="layout testimonials__inner">
+          <div class="testimonial-carousel" id="testimonial-carousel">
+            <blockquote class="testimonial-carousel__quote" aria-live="polite">
+              <p class="testimonial-carousel__text" id="testimonial-text"></p>
+              <footer class="testimonial-carousel__attr" id="testimonial-attr"></footer>
+            </blockquote>
+            <div class="testimonial-carousel__controls">
+              <button type="button" class="testimonial-carousel__btn" id="testimonial-prev" aria-label="Previous testimonial">
+                <span aria-hidden="true">‹</span>
+              </button>
+              <button type="button" class="testimonial-carousel__btn" id="testimonial-next" aria-label="Next testimonial">
+                <span aria-hidden="true">›</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logo-wall" aria-labelledby="logo-wall-heading">
+        <div class="layout">
+          <h2 id="logo-wall-heading" class="logo-wall__title">Trusted by Leading Builders, Developers &amp; Councils</h2>
+          <div class="logo-wall__grid" role="list">
+            <!-- 21 placeholder logos -->
+            <div class="logo-tile" role="listitem"><span>Logo 01</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 02</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 03</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 04</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 05</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 06</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 07</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 08</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 09</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 10</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 11</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 12</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 13</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 14</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 15</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 16</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 17</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 18</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 19</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 20</span></div>
+            <div class="logo-tile" role="listitem"><span>Logo 21</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mini-sections layout" aria-label="About and resources">
+        <article class="mini-card" id="about">
+          <h2 class="mini-card__title">About</h2>
+          <p class="mini-card__text">
+            Placeholder about BRAND — replace with your firm profile, team snapshot, and values.
+          </p>
+        </article>
+        <article class="mini-card" id="faqs">
+          <h2 class="mini-card__title">FAQs</h2>
+          <p class="mini-card__text">Placeholder — add common questions about fees, timeframes, and approvals.</p>
+        </article>
+        <article class="mini-card" id="portfolio">
+          <h2 class="mini-card__title">Portfolio</h2>
+          <p class="mini-card__text">Placeholder — link to selected projects or case studies when ready.</p>
+        </article>
+        <article class="mini-card" id="blog">
+          <h2 class="mini-card__title">Blog</h2>
+          <p class="mini-card__text">Placeholder — news, technical notes, and council updates.</p>
+        </article>
+      </section>
+
+      <section class="final-cta" aria-labelledby="final-cta-heading">
+        <div class="layout final-cta__inner">
+          <h2 id="final-cta-heading" class="final-cta__title">Let's Get Your Project Moving</h2>
+          <p class="final-cta__sub">Clear advice. Fast turnaround. No surprises.</p>
+          <a class="btn btn--primary" href="#contact">Get a Fast Fee + Timeframe</a>
+        </div>
       </section>
     </main>
-    <footer>
-      <small>Built locally — push to GitHub when you are ready.</small>
+
+    <footer class="site-footer">
+      <div class="layout site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo-link logo-link--large" href="#top" aria-label="BRAND — home">
+            <svg class="logo-svg logo-svg--large" width="160" height="96" viewBox="0 0 120 72" role="img">
+              <title>BRAND</title>
+              <circle cx="44" cy="36" r="30" fill="none" stroke="var(--color-navy)" stroke-width="1.5" />
+              <text x="44" y="40" text-anchor="middle" fill="var(--color-navy)" font-size="15" font-weight="800" font-family="Nunito, system-ui, sans-serif">BRAND</text>
+              <text x="44" y="62" text-anchor="middle" fill="var(--color-sky)" font-size="7" font-weight="700" font-family="Nunito, system-ui, sans-serif" letter-spacing="0.08em">PLAN • DESIGN • ENGINEER • EXECUTE</text>
+            </svg>
+          </a>
+        </div>
+        <div class="site-footer__badges">
+          <div class="iso-badge iso-badge--safety">
+            <p class="iso-badge__label">ISO 45001 — Safety</p>
+            <p class="iso-badge__stars" aria-hidden="true">★★★★★</p>
+          </div>
+          <div class="iso-badge iso-badge--quality">
+            <p class="iso-badge__label">ISO 9001 — Quality</p>
+            <p class="iso-badge__stars" aria-hidden="true">★★★★★</p>
+          </div>
+          <div class="iso-badge iso-badge--env">
+            <p class="iso-badge__label">ISO 14001 — Environmental</p>
+            <p class="iso-badge__stars" aria-hidden="true">★★★★★</p>
+          </div>
+        </div>
+        <div class="site-footer__contact">
+          <p><strong>Contact Us</strong><br /><a href="mailto:info@brand.com.au">info@brand.com.au</a></p>
+          <p>City One | City Two | City Three</p>
+          <p class="site-footer__iso-line">ISO 45001 | ISO 9001 | ISO 14001 Certified</p>
+          <ul class="social-row" aria-label="Social links">
+            <li>
+              <a class="social-row__link" href="#" aria-label="LinkedIn (placeholder)">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="12" y="16" text-anchor="middle" font-size="10" fill="currentColor" font-family="sans-serif">in</text></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-row__link" href="#" aria-label="Instagram (placeholder)">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-row__link" href="#" aria-label="Facebook (placeholder)">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8.2h2.7l.5-3.2H13.5V8.9c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10.6H7v3.2h2.8V22h3.7z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-row__link" href="#" aria-label="YouTube (placeholder)">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path fill="currentColor" d="M10 9.5v5l4.5-2.5z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="site-footer__fine">
+        <small>© <span id="year"></span> BRAND. Placeholder content — replace before publication.</small>
+      </p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
