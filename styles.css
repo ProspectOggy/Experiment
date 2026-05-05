@@ -58,7 +58,7 @@ a { color: inherit; }
 .shell--wide { width: min(100%, 1560px); }
 
 .site-header {
-  background: var(--color-cream-dark);
+  background: var(--color-white);
   position: relative;
   z-index: 50;
 }
@@ -410,7 +410,7 @@ a { color: inherit; }
     position: absolute;
     right: 1.5rem;
     top: 85px;
-    background: var(--color-cream-dark);
+    background: var(--color-white);
     border: 1px solid var(--color-border);
     padding: 1rem;
     display: none;
